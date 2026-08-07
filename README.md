@@ -10,7 +10,7 @@ It is designed for established projects that want clear authority, bounded execu
 
 **MORE v2.0.0-rc.1 — release candidate development**
 
-The normative specification is maintained in [`SPEC.md`](SPEC.md). RC1 is being developed in public through ordinary GitHub issues and pull requests.
+The normative specification is maintained in [`SPEC.md`](SPEC.md). The repository is currently being prepared for public RC1 development and distribution through ordinary GitHub issues and pull requests.
 
 ## The four roles
 
@@ -109,4 +109,4 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## License
 
-A project license has not yet been selected. Distribution terms will be established before the first public stable release.
+A project license has not yet been selected. Distribution terms must be established before the public RC1 release. See Issue #1.
