@@ -67,18 +67,20 @@ Agent workflows tend to fail in two opposite directions:
 
 MORE tries to keep only the controls justified by real failure modes.
 
-The v2 design was informed by field use in `kalshi-temp-edge`, including fail-closed production execution, bounded package amendments, evidence reuse, and exact operational acceptance, followed by multiple rounds of adversarial protocol testing.
+The v2 design was informed by field use in a private production project published here under the codename **Project Cedar**, including fail-closed execution, bounded package amendments, evidence reuse, operational package preparation, and minimal adoption, followed by multiple rounds of adversarial protocol testing.
+
+Private-source field studies use stable public codenames and sanitized evidence. The public repository does not intentionally publish mappings back to private source projects. See [`FIELD_VALIDATION.md`](FIELD_VALIDATION.md).
 
 ## Repository layout
 
 ```text
 SPEC.md                 Normative MORE v2 specification
 ADOPTION.md             Minimal adoption guide for established repositories
-FIELD_VALIDATION.md     RC-to-stable real-world validation gate
+FIELD_VALIDATION.md     RC-to-stable real-world validation and privacy rules
 CONTRIBUTING.md         Development and proposal workflow
 AGENTS.md               Instructions for software agents working on MORE
 examples/               Small, copyable handoff patterns
-case-studies/           Field evidence and protocol lessons
+case-studies/           Sanitized field evidence and protocol lessons
 .github/                Contribution templates
 ```
 
