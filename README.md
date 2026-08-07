@@ -73,6 +73,7 @@ The v2 design was informed by field use in `kalshi-temp-edge`, including fail-cl
 
 ```text
 SPEC.md                 Normative MORE v2 specification
+ADOPTION.md             Minimal adoption guide for established repositories
 FIELD_VALIDATION.md     RC-to-stable real-world validation gate
 CONTRIBUTING.md         Development and proposal workflow
 AGENTS.md               Instructions for software agents working on MORE
@@ -94,7 +95,7 @@ A minimal adoption can begin with:
 - explicit Owner authorization for consequential execution;
 - cold-start and evidence rules.
 
-See [`SPEC.md`](SPEC.md) for the complete protocol and `examples/` for reusable patterns.
+Start with [`ADOPTION.md`](ADOPTION.md). It shows how to inspect an existing repository, reuse equivalent controls, adopt MORE prospectively, and remove it without rewriting history. See [`SPEC.md`](SPEC.md) for the complete protocol and `examples/` for reusable patterns.
 
 ## Development
 
