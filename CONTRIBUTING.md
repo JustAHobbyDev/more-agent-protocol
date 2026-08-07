@@ -91,4 +91,6 @@ Tooling may eventually be useful, but it should implement proven protocol needs 
 
 ## License
 
-The project license is intentionally unresolved during initial RC bootstrap. A license must be selected before the first public stable release and before encouraging broad redistribution.
+MORE is licensed under the Apache License 2.0. By intentionally submitting a contribution for inclusion in MORE, you agree that the contribution is provided under the terms of the Apache License 2.0 unless you explicitly state otherwise, consistent with Section 5 of the license.
+
+See [`LICENSE`](LICENSE) for the full terms.
