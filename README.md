@@ -10,7 +10,7 @@ It is designed for established projects that want clear authority, bounded execu
 
 **MORE v2.0.0-rc.1 — release candidate development**
 
-The normative specification is maintained in [`SPEC.md`](SPEC.md). RC1 is being developed publicly through ordinary GitHub issues and pull requests.
+The normative specification is maintained in [`SPEC.md`](SPEC.md). RC1 is being developed publicly through ordinary GitHub issues and pull requests. The field evidence required before stable v2.0.0 is defined in [`FIELD_VALIDATION.md`](FIELD_VALIDATION.md).
 
 ## The four roles
 
@@ -73,6 +73,7 @@ The v2 design was informed by field use in `kalshi-temp-edge`, including fail-cl
 
 ```text
 SPEC.md                 Normative MORE v2 specification
+FIELD_VALIDATION.md     RC-to-stable real-world validation gate
 CONTRIBUTING.md         Development and proposal workflow
 AGENTS.md               Instructions for software agents working on MORE
 examples/               Small, copyable handoff patterns
@@ -105,7 +106,7 @@ MORE itself is developed using MORE principles:
 - Narrow defects should produce narrow amendments.
 - New governance mechanisms require demonstrated failure, not hypothetical completeness.
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). Field reports should use the repository's Field report issue template and are evaluated against [`FIELD_VALIDATION.md`](FIELD_VALIDATION.md).
 
 ## License
 
