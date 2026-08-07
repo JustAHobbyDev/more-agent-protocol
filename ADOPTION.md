@@ -158,6 +158,21 @@ If the project decides MORE is unsuitable:
 
 Removing MORE changes future coordination semantics. It does not rewrite what previously happened.
 
+## 10. Reporting adoption from a private repository
+
+A private repository may validate MORE without becoming publicly identifiable.
+
+When publishing an adoption field study from a private source:
+
+- assign a stable neutral public codename;
+- keep the codename-to-private-project mapping out of the public MORE repository;
+- remove private repository URLs, issue/PR numbers, commit hashes, hostnames, exact paths, service names, provider identities, customer/market/location names, and other source-specific identifiers that are unnecessary to evaluate MORE;
+- preserve the authority sequence, risk boundary, evidence behavior, adoption delta, and protocol lesson;
+- link public readers only to sanitized MORE artifacts;
+- leave exact supporting evidence inside the private project.
+
+See `FIELD_VALIDATION.md` for the complete private-source publication rules.
+
 ## Adoption success criterion
 
 A successful minimal adoption makes authority and handoffs clearer while adding little or no new project-management state.

@@ -12,7 +12,39 @@ A field report may validate MORE even when the underlying task fails. A fail-clo
 
 A field result is a MORE protocol defect only when the protocol itself is materially ambiguous, unsafe, internally inconsistent, or unnecessarily burdensome under reasonable application. Project-specific mistakes, bad implementation, ignored instructions, or an actor violating a clear MORE rule are not automatically protocol defects.
 
-No public disclosure of private project details is required. Reports may redact project names, paths, credentials, provider identities, or other sensitive details so long as enough structure remains to evaluate the MORE behavior.
+## Private-source publication
+
+Private repositories may contribute MORE field evidence without becoming public or exposing their operational details.
+
+When a field study is published from a private source, the public MORE material must use a stable neutral codename and must not expose a mapping back to the private project unless the source Owner explicitly authorizes that disclosure.
+
+A public private-source study should remove or generalize, as applicable:
+
+- repository owner/name and private repository URLs;
+- private issue and pull-request numbers;
+- private commit hashes and artifact identifiers;
+- hostnames and exact filesystem paths;
+- service, unit, credential, account, provider, customer, market, location, or environment names that are specific to the source project;
+- secret-adjacent metadata or operational details that are unnecessary to understand the MORE behavior.
+
+The sanitized report should preserve the structural evidence needed to evaluate MORE, such as:
+
+- the roles involved;
+- the risk boundary;
+- the operative handoff sequence;
+- whether evidence was direct, inherited, or refreshed;
+- where authority stopped or changed;
+- whether a bounded amendment occurred;
+- what acceptance condition passed or failed;
+- the protocol lesson.
+
+Public evidence for a private-source report should terminate in sanitized public MORE artifacts. The exact source evidence may remain inside the private repository.
+
+Do not maintain a public codename-to-private-project lookup table. A codename exists to support continuity across sanitized studies without identifying the source.
+
+If the source project later becomes public, revealing the mapping remains a separate Owner decision; publication does not happen automatically.
+
+The current private field source is published under the codename **Project Cedar**.
 
 ## Required stable-release coverage
 
@@ -126,7 +158,7 @@ Before stable release, evidence should include at least **two distinct project c
 
 This is a diversity requirement, not a task-count requirement. There is no required minimum number of successful issues or pull requests beyond what is needed to cover the six scenarios credibly.
 
-The existing `kalshi-temp-edge` case studies may contribute evidence, but stable release requires at least one additional project context during the RC period.
+The existing **Project Cedar** case studies may contribute evidence, but stable release requires at least one additional project context during the RC period.
 
 ## How to report field use
 
@@ -135,17 +167,18 @@ Use the repository's **Field report** issue template when practical.
 A useful report identifies:
 
 - MORE version or commit used;
-- project/work-item context;
+- public project identifier or codename;
+- whether the source is public or private;
 - roles that actually participated;
 - risk boundary;
 - validation scenario(s) exercised;
 - operative handoffs or equivalent shared-state transitions;
-- exact evidence;
+- sanitized public evidence;
 - what MORE improved;
 - friction, ambiguity, or failure;
 - whether the result appears to be validation, documentation friction, misuse, or a possible normative defect.
 
-A report does not need to reproduce the full project history.
+A report does not need to reproduce the full project history. A report from a private source must follow the private-source publication rules above.
 
 ## Classifying findings
 
@@ -173,7 +206,7 @@ MORE v2 is eligible for stable release when:
 
 - [ ] all six required scenarios have credible field evidence;
 - [ ] at least two distinct project contexts contributed to that evidence;
-- [ ] at least one project context is additional to the original `kalshi-temp-edge` field evidence;
+- [ ] at least one project context is additional to the original Project Cedar field evidence;
 - [ ] open field reports contain no unresolved release-blocking normative defect;
 - [ ] any normative RC change made in response to field evidence has received the review required by `CONTRIBUTING.md`;
 - [ ] the minimal adoption guide has been exercised against at least one established repository;

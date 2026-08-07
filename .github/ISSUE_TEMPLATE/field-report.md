@@ -8,11 +8,19 @@ assignees: []
 
 ## MORE version
 
-Release, tag, or exact commit used.
+Release, tag, or exact public MORE commit used.
 
-## Project / work item
+## Public project identifier
 
-Link the repository, issue, pull request, or other shared coordination surface. Redact private details when necessary.
+For a public source, use the public project name.
+
+For a private source, use a stable neutral codename such as `Project Cedar`. Do **not** include the private repository name, URL, private issue/PR numbers, private commit hashes, or a public mapping back to the source project.
+
+## Source visibility
+
+`PUBLIC` or `PRIVATE`.
+
+If `PRIVATE`, sanitize the report according to `FIELD_VALIDATION.md`. Public evidence should point to sanitized MORE artifacts rather than inaccessible private-source URLs.
 
 ## MORE roles involved
 
@@ -21,7 +29,7 @@ Link the repository, issue, pull request, or other shared coordination surface. 
 - Reviewer:
 - Executor:
 
-Only list roles that actually participated.
+Only list roles that actually participated. Use role descriptions rather than private identities when identities are not intended for disclosure.
 
 ## Risk boundary
 
@@ -29,19 +37,23 @@ LOW / MEDIUM / HIGH / CRITICAL
 
 ## Validation coverage
 
-Check every scenario this field use genuinely exercised.
+List only the scenarios this field use genuinely exercised. Do not use task checkboxes for coverage classification.
 
-- [ ] Low-risk role collapse
-- [ ] Independent review of a repository candidate
-- [ ] Bounded remediation and rereview
-- [ ] High-risk consequential execution
-- [ ] Cold-start or replacement continuation
-- [ ] Evidence reuse across a transition or delta
-- [ ] Other / not primarily a stable-release validation case
+Possible values:
+
+- Low-risk role collapse
+- Independent review of a repository candidate
+- Bounded remediation and rereview
+- High-risk consequential execution
+- Cold-start or replacement continuation
+- Evidence reuse across a transition or delta
+- Other / not primarily a stable-release validation case
+
+Coverage:
 
 ## What happened
 
-Summarize the operative handoffs or equivalent shared-state transitions and final result.
+Summarize the operative handoffs or equivalent shared-state transitions and final result. For private sources, preserve protocol structure while removing source-identifying operational details.
 
 ## What worked
 
@@ -51,19 +63,25 @@ Which MORE rules reduced ambiguity, risk, context cost, or duplicated work?
 
 Where did MORE cause unnecessary work, fail to specify behavior, or permit an undesirable result?
 
-## Evidence
+## Public evidence
 
-Link exact comments, commits, artifacts, checks, or observed state.
+Link sanitized public MORE case studies, public commits, public pull requests, or other public evidence.
 
-Distinguish direct evidence from evidence inherited from another role when that distinction matters.
+For a private source, do not link private repositories or reproduce private identifiers. State when exact supporting evidence remains in the private source.
+
+Distinguish direct evidence from inherited evidence when that distinction matters.
 
 ## Classification
 
-- [ ] Protocol validation
-- [ ] Documentation or example gap
-- [ ] Project-specific misuse
-- [ ] Possible normative defect
+List the applicable classification in plain text rather than task checkboxes:
+
+- Protocol validation
+- Documentation or example gap
+- Project-specific misuse
+- Possible normative defect
+
+Classification:
 
 ## Protocol implication
 
-Describe the smallest justified follow-up. If this appears to be a normative defect, open a separate protocol-defect issue and link this report as evidence.
+Describe the smallest justified follow-up. If this appears to be a normative defect, open a separate protocol-defect issue and link this report as sanitized public evidence.
