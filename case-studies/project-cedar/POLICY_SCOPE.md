@@ -1,0 +1,1 @@
+Project Cedar public case studies are subject to the root `PUBLICATION_POLICY.md`. The policy protects both source identity and commercially sensitive know-how; when those goals conflict with richer public detail, the public study should remain abstract.
