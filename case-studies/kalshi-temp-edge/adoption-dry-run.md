@@ -1,8 +1,11 @@
-# kalshi-temp-edge — MORE v2 Minimal Adoption Dry Run
+# kalshi-temp-edge — MORE v2 Minimal Adoption Field Test
 
-This exercise applies `ADOPTION.md` to the active `JustAHobbyDev/kalshi-temp-edge` repository without changing that repository.
+This exercise applied `ADOPTION.md` to the active `JustAHobbyDev/kalshi-temp-edge` repository in two stages:
 
-The purpose is to test whether MORE can be adopted by an established project without rewriting working conventions or recreating the process accumulation the project previously rejected.
+1. a read-only dry run against the existing project configuration;
+2. a real minimal adoption through `kalshi-temp-edge` Issue #28 and PR #29.
+
+The purpose was to test whether MORE can be adopted by an established project without rewriting working conventions or recreating the process accumulation the project previously rejected.
 
 ## Existing project surfaces inspected
 
@@ -24,7 +27,7 @@ Those artifacts should remain. They are not duplicate MORE ledgers.
 
 ## Existing behavior that already matches MORE
 
-`AGENTS.md` already provides most of MORE's minimum adoption semantics:
+`AGENTS.md` already provided most of MORE's minimum adoption semantics:
 
 - the latest explicitly addressed handoff is active instruction;
 - historical comments are context unless incorporated;
@@ -39,9 +42,9 @@ Those artifacts should remain. They are not duplicate MORE ledgers.
 
 Issue #26 already demonstrates risk scoped to the current handoff: the active task is MEDIUM read-only package preparation, while the eventual host-changing/provider-capable execution will require independent review and explicit Owner authorization.
 
-## Existing project-native controls to preserve
+## Existing project-native controls preserved
 
-A MORE adoption should not replace or duplicate:
+The adoption did not replace or duplicate:
 
 - `CURRENT.md`;
 - `DECISIONS.md`;
@@ -51,13 +54,13 @@ A MORE adoption should not replace or duplicate:
 - existing issue, PR, release, deployment, and production-safety practices;
 - Decision 0011 or any other durable technical decision.
 
-The project may keep controls stricter or more detailed than MORE's default.
+The project retains controls stricter or more detailed than MORE's default.
 
-## Minimal missing semantics
+## Minimal missing semantics identified
 
-A literal replacement of `AGENTS.md` with MORE's default repository block would be worse than the existing instructions.
+A literal replacement of `AGENTS.md` with MORE's default repository block would have been worse than the existing instructions.
 
-The smallest useful adoption delta is instead to identify the existing workflow as MORE-aligned and add only semantics that are not currently explicit enough:
+The dry run identified four useful additions:
 
 1. **Role mapping**
    - Manager: bounds and coordinates the work item.
@@ -74,41 +77,44 @@ The smallest useful adoption delta is instead to identify the existing workflow 
 4. **Prospective adoption boundary**
    Existing issue history does not need to be rewritten. MORE terminology begins with new work items or the next explicitly addressed handoff in an existing item.
 
-## Proposed repository-level delta
+## Live adoption
 
-A real adoption could add a short section to `AGENTS.md` similar to:
+The Owner authorized `kalshi-temp-edge` as the field-test project.
+
+Issue #28, **Adopt MORE v2 minimal handoff semantics**, bounded the adoption to `AGENTS.md` only and explicitly prohibited changes to application code, durable technical decisions, production state, and Issue #26's existing handoff.
+
+PR #29 implemented the adoption with exactly:
 
 ```text
-## MORE alignment
-
-This repository uses MORE v2 semantics for GitHub work handoffs:
-Manager / Owner / Reviewer / Executor.
-
-Existing repository terminology, threat levels, result states, durable documents,
-and issue/PR practices remain authoritative where compatible.
-
-MORE applies prospectively to new work items and to the next explicitly addressed
-handoff in already-open work items. Existing history is not rewritten.
-
-A newer handoff changes current instruction and authority but does not erase
-unresolved evidence, failed verification, or observed technical facts.
-Unchanged valid evidence may be inherited; volatile state must be refreshed when
-its current value matters.
-
-Reviewer approval and Owner authorization are bound to the exact subject reviewed
-or authorized and do not automatically transfer across material changes.
-
-Executor means the actor performing the bounded task, including investigation,
-package preparation, implementation, verification, or approved operational work.
+1 file changed
+23 additions
+0 deletions
 ```
 
-The rest of the existing `AGENTS.md` should remain intact.
+The added `MORE alignment` section:
+
+- identifies Manager / Owner / Reviewer / Executor;
+- makes adoption prospective;
+- preserves unresolved evidence across later authority changes;
+- allows selective inheritance of unchanged valid evidence;
+- requires volatile evidence to be refreshed when current state matters;
+- binds Reviewer approval and Owner authorization to exact subjects;
+- clarifies that Executor includes investigation and package preparation;
+- preserves stricter existing repository safeguards.
+
+PR #29 was squash-merged as:
+
+```text
+768251ca026755bdbfa99823d358e4dd586f24c4
+```
+
+No other project file changed.
 
 ## Issue #26 prospective replay
 
-No rewrite of Issue #26 is needed.
+No rewrite of Issue #26 was needed before or during adoption.
 
-Its current `[MANAGER → EXECUTOR]` handoff remains understandable under MORE:
+Its existing `[MANAGER → EXECUTOR]` handoff remains understandable under MORE:
 
 - the current Executor is performing read-only package preparation, not independent review;
 - the current MEDIUM boundary authorizes inspection and package construction only;
@@ -121,19 +127,19 @@ The only terminology needing future cleanup is language such as "the reviewer ma
 
 ## Cold-start test
 
-Using the current repository plus the proposed minimal delta, a fresh actor can recover:
+With the minimal alignment merged, a fresh actor can recover:
 
 - governing project state from `CURRENT.md`;
 - durable constraints from `DECISIONS.md`;
-- repository-wide execution rules from `AGENTS.md`;
-- current task authority from Issue #26's latest addressed handoff;
+- repository-wide execution rules and MORE alignment from `AGENTS.md`;
+- current task authority from the governing issue's latest addressed handoff;
 - actual technical truth from repository and observed production state.
 
 No session journal, authority registry, project board, or additional coordination database is required.
 
 ## Removal test
 
-The proposed adoption is reversible by removing or superseding the short MORE-alignment section and recording a replacement future-handoff rule.
+The adoption is reversible by removing or superseding the short MORE-alignment section and recording a replacement future-handoff rule.
 
 No issue history, technical evidence, durable decision, or repository state would need to be rewritten.
 
@@ -143,12 +149,15 @@ No issue history, technical evidence, durable decision, or repository state woul
 
 The adoption guide succeeds when it treats MORE as a semantic overlay on working repository practices rather than an installation package.
 
-The dry run confirms that:
+The field test confirms that:
 
 - equivalent existing controls should be reused;
 - the full default repository instruction should not be pasted when it would duplicate stronger local rules;
 - adoption can begin prospectively without rewriting open work;
 - durable current-state and decision documents are compatible with MORE when they record project truth rather than transient task authority;
+- a real adoption can remain a small additive repository-instruction change;
 - removal remains straightforward.
 
 No normative MORE defect was discovered by this exercise.
+
+The corresponding MORE field report is Issue #7.
