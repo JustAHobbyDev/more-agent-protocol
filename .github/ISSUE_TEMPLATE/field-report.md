@@ -6,9 +6,13 @@ labels: []
 assignees: []
 ---
 
+## MORE version
+
+Release, tag, or exact commit used.
+
 ## Project / work item
 
-Link the repository, issue, pull request, or other shared coordination surface.
+Link the repository, issue, pull request, or other shared coordination surface. Redact private details when necessary.
 
 ## MORE roles involved
 
@@ -23,9 +27,21 @@ Only list roles that actually participated.
 
 LOW / MEDIUM / HIGH / CRITICAL
 
+## Validation coverage
+
+Check every scenario this field use genuinely exercised.
+
+- [ ] Low-risk role collapse
+- [ ] Independent review of a repository candidate
+- [ ] Bounded remediation and rereview
+- [ ] High-risk consequential execution
+- [ ] Cold-start or replacement continuation
+- [ ] Evidence reuse across a transition or delta
+- [ ] Other / not primarily a stable-release validation case
+
 ## What happened
 
-Summarize the operative handoffs and result.
+Summarize the operative handoffs or equivalent shared-state transitions and final result.
 
 ## What worked
 
@@ -39,9 +55,15 @@ Where did MORE cause unnecessary work, fail to specify behavior, or permit an un
 
 Link exact comments, commits, artifacts, checks, or observed state.
 
+Distinguish direct evidence from evidence inherited from another role when that distinction matters.
+
+## Classification
+
+- [ ] Protocol validation
+- [ ] Documentation or example gap
+- [ ] Project-specific misuse
+- [ ] Possible normative defect
+
 ## Protocol implication
 
-- [ ] No change; useful validation only
-- [ ] Wording clarification may help
-- [ ] Possible normative defect
-- [ ] Possible example/documentation gap
+Describe the smallest justified follow-up. If this appears to be a normative defect, open a separate protocol-defect issue and link this report as evidence.
