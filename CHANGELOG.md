@@ -26,11 +26,14 @@ Initial public release candidate for the formally named MORE protocol: **Manager
 
 ### Field evidence
 
-The v2 design was exercised against recent `kalshi-temp-edge` work:
+The v2 design was exercised against a private production project published under the codename **Project Cedar**:
 
-- Issue #23 — fail-closed production execution and bounded amendment after an allowlist defect.
-- Issue #24 — correction of an operation-irrelevant exact precondition and evidence revalidation at artifact use.
-- Issue #26 — large read-only package preparation preceding separately reviewed and Owner-authorized production execution.
+- fail-closed consequential execution and bounded amendment after an execution-boundary defect;
+- correction of an operation-irrelevant exact precondition and evidence revalidation at artifact use;
+- large read-only package preparation preceding separately reviewed and Owner-authorized consequential execution;
+- minimal adoption into an established repository without replacing project-native workflow.
+
+Private-source studies are published only as sanitized public case studies; exact source evidence remains private.
 
 ### Adversarial testing
 
