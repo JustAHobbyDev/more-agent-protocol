@@ -109,4 +109,4 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## License
 
-A project license has not yet been selected. Distribution terms must be established before the public RC1 release. See Issue #1.
+MORE is licensed under the [Apache License 2.0](LICENSE) (`Apache-2.0`).
