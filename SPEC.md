@@ -395,7 +395,7 @@ A material conflict must be reported rather than silently resolved.
 
 ## 7. GitHub Work-Item Boundary
 
-Every active unit of MORE-governed work must have one identifiable GitHub work item. The default is one GitHub issue.
+Every active unit of MORE-governed work must have one identifiable GitHub work item. A governing work item may be either a GitHub issue or a pull request. The default is one GitHub issue.
 
 A work item should normally identify the objective, relevant current state, active scope, exclusions, risk level, acceptance criteria, latest handoff, unresolved decisions, implementation branch or pull request where applicable, and final closure.
 
@@ -405,21 +405,25 @@ The issue does not need to contain the complete history of the project.
 
 A handoff is operative only within its governing work item. Before treating a handoff as operative, an actor must bind the current execution context to exactly one governing work item.
 
-Every delegation of MORE-governed work must identify the exact governing issue or pull request. The identity must be sufficient to distinguish that item from other accessible work items, normally by repository plus issue/pull-request number or by URL.
+A handoff posted inside its governing issue or pull request inherits that container identity. It does not need to restate the work-item identity.
 
-A delegation may also identify the exact active handoff when that reference usefully locates the instruction or disambiguates the intended subject. This is not normally required. Once bound to the work item, the acting role must locate the latest valid handoff addressed to that role rather than assume that a supplied older handoff remains operative.
+When delegation moves into an execution context, such as a spawned agent or thread, that does not preserve the GitHub container identity, the delegation must carry the exact governing issue or pull request identity. The identity must be sufficient to distinguish that item from other accessible work items, normally by repository plus issue/pull-request number or by URL.
+
+A delegation may also identify the exact active handoff when that reference is needed to locate the instruction or disambiguate the intended subject. This is not normally required. Once bound to the work item, the acting role must locate the latest valid handoff addressed to that role rather than assume that a supplied older handoff remains operative.
+
+When a bounded activity moves from an issue to a pull request, or from a pull request to an issue, the handoff establishing the transition must make the new governing work-item boundary unambiguous and incorporate any still-operative prior material by exact reference. The new surface becomes the one governing work item for that activity. The prior surface remains context and a source of incorporated material, not a simultaneous authority namespace.
 
 A top-level cold-start actor should resolve the governing work item from the smallest unambiguous source available, in this order:
 
 1. an explicit issue or pull-request identity supplied for the current task;
 2. an exact handoff or comment reference that resolves to its containing work item;
-3. GitHub or durable project context that unambiguously identifies the work item for the current task.
+3. GitHub context or stable durable project rules and context that unambiguously determine the work item for the current task.
 
 A current pull request and its platform-recorded branch association may contribute to that context. A branch name, search result, recent-work ordering, prior-session memory, or agent-local state is only a discovery lead; it does not establish governing authority by itself. The actor must confirm the candidate from the work item and current project state.
 
 When two or more plausible work items remain, the actor must resolve the ambiguity with the delegating actor or another authoritative project source before treating either handoff as operative. When no work item exists for new MORE-governed work, the Manager must establish one through the project's normal GitHub workflow before delegating the work. Read-only inspection needed to discover or establish the boundary may occur before binding; substantive execution may not.
 
-Do not create a repository status file, active-work registry, session journal, or parallel task system to perform this binding.
+Durable project material must not maintain a transient current-work pointer for discovery. Do not create or repurpose `CURRENT.md`, a repository status file, an active-issue pointer or registry, a session journal, or a parallel task system to perform this binding.
 
 ### 7.2 When to create a separate issue
 
@@ -1367,7 +1371,7 @@ Manager / Owner / Reviewer / Executor.
 
 For a MORE-governed GitHub work item:
 
-- Every delegated task identifies its exact governing issue or pull request.
+- A handoff inside its governing issue or pull request inherits that identity; delegation into a context that does not preserve the GitHub container carries the exact work-item identity.
 - The latest handoff explicitly addressed to the acting role is operative instruction and authority.
 - Historical instructions are context unless the active handoff incorporates them by exact reference.
 - New authority does not erase unresolved evidence, failed verification, or observed technical facts.

@@ -64,7 +64,7 @@ Manager / Owner / Reviewer / Executor.
 
 For a MORE-governed GitHub work item:
 
-- Every delegated task identifies its exact governing issue or pull request.
+- A handoff inside its governing issue or pull request inherits that identity; delegation into a context that does not preserve the GitHub container carries the exact work-item identity.
 - The latest handoff explicitly addressed to the acting role is operative instruction and authority.
 - Historical instructions are context unless the active handoff incorporates them by exact reference.
 - New authority does not erase unresolved evidence, failed verification, or observed technical facts.
