@@ -399,7 +399,7 @@ Every active unit of MORE-governed work must have one identifiable GitHub work i
 
 A work item should normally identify the objective, relevant current state, active scope, exclusions, risk level, acceptance criteria, latest handoff, unresolved decisions, implementation branch or pull request where applicable, and final closure.
 
-The issue does not need to contain the complete history of the project.
+The work item does not need to contain the complete history of the project.
 
 ### 7.1 Work-item binding and discovery
 
