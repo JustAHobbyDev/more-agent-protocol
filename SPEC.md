@@ -604,6 +604,8 @@ For a consequential execution package, the Manager must not advance the package 
 
 After receiving an internal Executor or Reviewer result, an active Manager should continue reconciliation and coordinate the next bounded internal action without requiring human relay when the next actor is available and that action remains within established authority. The Manager should continue until it has brought the work to the next genuine boundary: required Owner or human judgment or authorization, an unresolved blocker, unavailable evidence or access, required external input, an explicit stop condition, inability to provide the next actor with sufficient context or independence, or completion.
 
+Before yielding at a non-completion boundary, the Manager must durably report the boundary and the action needed to resolve it. When Owner or human judgment or authorization is required, the Manager must present the bounded decision or authorization request to that actor before stopping.
+
 Publishing or receiving an internal GitHub handoff or result is a durable coordination event. It is not by itself a reason for the active Manager execution context to stop.
 
 Internal orchestration continuity does not expand authority, satisfy an Owner boundary, relax Reviewer independence, or bypass the work-item binding and latest-addressed-handoff rules. If the next actor is unavailable or cannot be given the required context or independence, the Manager must report that boundary rather than claim that execution continued or repeatedly retry without new evidence.
