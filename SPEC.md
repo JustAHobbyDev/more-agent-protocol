@@ -1384,7 +1384,7 @@ Manager / Owner / Reviewer / Executor.
 For a MORE-governed GitHub work item:
 
 - A handoff inside its governing issue or pull request inherits that identity; delegation into a context that does not preserve the GitHub container carries the exact work-item identity.
-- An active Manager continues already-authorized internal orchestration across available Executor and Reviewer handoffs until a genuine authority, evidence, external-input, stop, or completion boundary.
+- An active Manager continues already-authorized internal orchestration across available Executor and Reviewer handoffs until a genuine authority, evidence, external-input, stop, or completion boundary; before yielding at a non-completion boundary, the Manager durably reports it and presents any required Owner or human decision or authorization request.
 - The latest handoff explicitly addressed to the acting role is operative instruction and authority.
 - Historical instructions are context unless the active handoff incorporates them by exact reference.
 - New authority does not erase unresolved evidence, failed verification, or observed technical facts.
