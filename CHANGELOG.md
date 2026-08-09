@@ -24,6 +24,7 @@ Initial public release candidate for the formally named MORE protocol: **Manager
 - Whole-requirement evaluation to prevent checklist gaming.
 - Optional read-only scouts as a non-role efficiency technique.
 - Explicit governing-work-item binding for delegated and cold-start actors.
+- Internal Manager orchestration continuity across already-authorized handoffs.
 
 ### Field evidence
 

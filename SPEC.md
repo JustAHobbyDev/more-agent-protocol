@@ -600,6 +600,16 @@ The Manager should avoid specifying implementation details that the Executor can
 
 For a consequential execution package, the Manager must not advance the package to Reviewer or Owner while a known execution-boundary gap remains. The Manager is responsible for coordinating boundary closure, but the package preparer and Reviewer have independent responsibilities under Section 12.
 
+### 11.1 Internal orchestration continuity
+
+After receiving an internal Executor or Reviewer result, an active Manager should continue reconciliation and coordinate the next bounded internal action without requiring human relay when the next actor is available and that action remains within established authority. The Manager should continue until it has brought the work to the next genuine boundary: required Owner or human judgment or authorization, an unresolved blocker, unavailable evidence or access, required external input, an explicit stop condition, inability to provide the next actor with sufficient context or independence, or completion.
+
+Publishing or receiving an internal GitHub handoff or result is a durable coordination event. It is not by itself a reason for the active Manager execution context to stop.
+
+Internal orchestration continuity does not expand authority, satisfy an Owner boundary, relax Reviewer independence, or bypass the work-item binding and latest-addressed-handoff rules. If the next actor is unavailable or cannot be given the required context or independence, the Manager must report that boundary rather than claim that execution continued or repeatedly retry without new evidence.
+
+MORE does not require a persistent Manager process, daemon, queue, scheduler, registry, or other orchestration subsystem to provide this continuity.
+
 ## 12. Execution-Boundary Closure
 
 An authorized mutation boundary must include every state change necessarily required to perform the approved operation.
@@ -1372,6 +1382,7 @@ Manager / Owner / Reviewer / Executor.
 For a MORE-governed GitHub work item:
 
 - A handoff inside its governing issue or pull request inherits that identity; delegation into a context that does not preserve the GitHub container carries the exact work-item identity.
+- An active Manager continues already-authorized internal orchestration across available Executor and Reviewer handoffs until a genuine authority, evidence, external-input, stop, or completion boundary.
 - The latest handoff explicitly addressed to the acting role is operative instruction and authority.
 - Historical instructions are context unless the active handoff incorporates them by exact reference.
 - New authority does not erase unresolved evidence, failed verification, or observed technical facts.
