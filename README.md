@@ -10,7 +10,7 @@ It is designed for established projects that want clear authority, bounded execu
 
 **MORE v2.0.0-rc.1 — release candidate development**
 
-The normative specification is maintained in [`SPEC.md`](SPEC.md). RC1 is being developed publicly through ordinary GitHub issues and pull requests. The field evidence required before stable v2.0.0 is defined in [`FIELD_VALIDATION.md`](FIELD_VALIDATION.md).
+The normative specification is maintained in [`SPEC.md`](SPEC.md). RC1 is being developed publicly through ordinary GitHub issues and pull requests. The field evidence required before stable v2.0.0 is defined in [`FIELD_VALIDATION.md`](FIELD_VALIDATION.md). Project-specific acronyms are tracked in [`GLOSSARY.md`](GLOSSARY.md).
 
 ## The four roles
 
@@ -77,6 +77,7 @@ Private-source field studies use stable public codenames and sanitized evidence.
 SPEC.md                 Normative MORE v2 specification
 ADOPTION.md             Minimal adoption guide for established repositories
 FIELD_VALIDATION.md     RC-to-stable real-world validation and privacy rules
+GLOSSARY.md             Project-specific acronyms and terminology
 CONTRIBUTING.md         Development and proposal workflow
 AGENTS.md               Instructions for software agents working on MORE
 examples/               Small, copyable handoff patterns
