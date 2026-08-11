@@ -431,6 +431,18 @@ Create a separate issue for an independently meaningful outcome such as a distin
 
 Do not create another issue merely because implementation has multiple steps, review found one bounded defect, several files are involved, multiple tests are required, or a narrow amendment is needed.
 
+### 7.3 Independently orchestrated child streams
+
+A Manager may delegate one bounded activity directly to an Executor when that Manager remains the identifiable active or recoverable responsibility that will receive and reconcile the result. This ordinary delegation does not require a child Manager or a separate work item.
+
+An independently orchestrated child stream is different: it has its own governing work item and is expected to coordinate its own Executor or Reviewer handoffs or receive and reconcile their returns. Such a stream must durably establish a Manager responsibility within the authority delegated by its parent. A clear addressed handoff such as `[MANAGER → MANAGER]` may establish that responsibility; the exact syntax is not mandatory.
+
+The child work item must identify the immediate parent work item, or an exact delegation reference that resolves to it, and must make the child objective, delegated authority and exclusions, and normal return destination recoverable. Child Manager authority must be equal to or narrower than the parent's delegated authority. Manager delegation does not create Owner authority or bypass an existing Owner boundary.
+
+Manager responsibility is durable responsibility, not a requirement that the original Manager process or session remain alive. A fresh context may re-establish the child Manager by binding to the child work item and its latest valid Manager-addressed handoff under the ordinary cold-start and replacement rules.
+
+If an independently orchestrated stream was rooted at Executor, or its Manager responsibility, parent delegation, authority boundary, or return destination cannot be established unambiguously, an Executor or Reviewer must not self-promote or infer broader authority. The actor may perform read-only inspection needed to identify the defect, but substantive continuation must fail closed: durably report the missing or ambiguous Manager boundary and return it to the delegating Manager or another authorized project source for correction.
+
 ## 8. Active Handoffs
 
 A MORE handoff transfers bounded responsibility or authority.
