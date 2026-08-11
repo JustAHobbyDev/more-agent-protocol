@@ -76,6 +76,7 @@ Private-source field studies use stable public codenames and sanitized evidence.
 ```text
 SPEC.md                 Normative MORE v2 specification
 ADOPTION.md             Minimal adoption guide for established repositories
+EVENTS.md               Optional transport-neutral progress/attention event profile
 FIELD_VALIDATION.md     RC-to-stable real-world validation and privacy rules
 GLOSSARY.md             Project-specific acronyms and terminology
 CONTRIBUTING.md         Development and proposal workflow
@@ -99,6 +100,8 @@ A minimal adoption can begin with:
 - cold-start and evidence rules.
 
 Start with [`ADOPTION.md`](ADOPTION.md). It shows how to inspect an existing repository, reuse equivalent controls, adopt MORE prospectively, and remove it without rewriting history. See [`SPEC.md`](SPEC.md) for the complete protocol and `examples/` for reusable patterns.
+
+Harnesses that need machine-consumable progress, handoff, or human-attention signals may optionally implement [`EVENTS.md`](EVENTS.md). Event delivery is not required for MORE compliance and does not replace GitHub authority or durable handoffs.
 
 ## Development
 
