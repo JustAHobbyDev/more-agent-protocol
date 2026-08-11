@@ -25,6 +25,7 @@ Initial public release candidate for the formally named MORE protocol: **Manager
 - Optional read-only scouts as a non-role efficiency technique.
 - Explicit governing-work-item binding for delegated and cold-start actors.
 - Internal Manager orchestration continuity across already-authorized handoffs.
+- Manager constraint-cost checkpoint before adding disproportionate compensating machinery around a negotiable constraint.
 
 ### Field evidence
 
