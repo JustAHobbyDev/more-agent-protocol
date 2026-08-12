@@ -8,9 +8,9 @@ It is designed for established projects that want clear authority, bounded execu
 
 ## Status
 
-**MORE v2.0.0-rc.1 — release candidate development**
+**MORE v2.0.0-rc.1 — release candidate**
 
-The normative specification is maintained in [`SPEC.md`](SPEC.md). RC1 is being developed publicly through ordinary GitHub issues and pull requests. The field evidence required before stable v2.0.0 is defined in [`FIELD_VALIDATION.md`](FIELD_VALIDATION.md). Project-specific acronyms are tracked in [`GLOSSARY.md`](GLOSSARY.md).
+The normative specification is maintained in [`SPEC.md`](SPEC.md). RC1 is the current public release candidate; normative behavior may still change in response to field defects during RC validation. The evidence required before stable v2.0.0 is defined in [`FIELD_VALIDATION.md`](FIELD_VALIDATION.md). Project-specific acronyms are tracked in [`GLOSSARY.md`](GLOSSARY.md).
 
 ## The four roles
 

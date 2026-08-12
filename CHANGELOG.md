@@ -2,7 +2,7 @@
 
 All notable normative changes to MORE will be recorded here.
 
-## [2.0.0-rc.1] — Unreleased
+## [2.0.0-rc.1] — 2026-08-12
 
 Initial public release candidate for the formally named MORE protocol: **Manager / Owner / Reviewer / Executor**.
 
@@ -24,8 +24,11 @@ Initial public release candidate for the formally named MORE protocol: **Manager
 - Whole-requirement evaluation to prevent checklist gaming.
 - Optional read-only scouts as a non-role efficiency technique.
 - Explicit governing-work-item binding for delegated and cold-start actors.
+- Manager-rooted responsibility for independently orchestrated child streams.
 - Internal Manager orchestration continuity across already-authorized handoffs.
 - Manager constraint-cost checkpoint before adding disproportionate compensating machinery around a negotiable constraint.
+- Optional transport-neutral progress and attention events that project, but do not create, MORE authority.
+- Non-authoritative GitHub Actions utility for conservative repair of malformed MORE handoff comment line breaks.
 
 ### Field evidence
 
