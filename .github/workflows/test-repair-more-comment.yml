@@ -1,0 +1,33 @@
+name: Test MORE comment repair
+
+on:
+  pull_request:
+    paths:
+      - '.github/actions/repair-more-comment/**'
+      - '.github/workflows/repair-more-comment.yml'
+      - '.github/workflows/repair-more-comment.test.mjs'
+      - '.github/workflows/test-repair-more-comment.yml'
+      - 'examples/github-actions-comment-repair.md'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/actions/repair-more-comment/**'
+      - '.github/workflows/repair-more-comment.yml'
+      - '.github/workflows/repair-more-comment.test.mjs'
+      - '.github/workflows/test-repair-more-comment.yml'
+      - 'examples/github-actions-comment-repair.md'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run repair tests
+        run: >-
+          node --test
+          .github/actions/repair-more-comment/repair.test.mjs
+          .github/workflows/repair-more-comment.test.mjs
