@@ -1,0 +1,14 @@
+name: Repair malformed MORE comment
+description: Conservatively repair literal newline publication damage in MORE addressed handoff comments.
+inputs:
+  github-token:
+    description: Repository-scoped token allowed to update the triggering issue or PR-conversation comment.
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Repair malformed MORE comment
+      shell: bash
+      env:
+        INPUT_GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: node "$GITHUB_ACTION_PATH/run.mjs"
