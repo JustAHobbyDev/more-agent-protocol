@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/actions/repair-more-comment/**'
       - '.github/workflows/repair-more-comment.yml'
+      - '.github/workflows/repair-more-comment.test.mjs'
       - '.github/workflows/test-repair-more-comment.yml'
       - 'examples/github-actions-comment-repair.md'
   push:
@@ -13,6 +14,7 @@ on:
     paths:
       - '.github/actions/repair-more-comment/**'
       - '.github/workflows/repair-more-comment.yml'
+      - '.github/workflows/repair-more-comment.test.mjs'
       - '.github/workflows/test-repair-more-comment.yml'
       - 'examples/github-actions-comment-repair.md'
 
@@ -25,4 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run repair tests
-        run: node --test .github/actions/repair-more-comment/repair.test.mjs
+        run: >-
+          node --test
+          .github/actions/repair-more-comment/repair.test.mjs
+          .github/workflows/repair-more-comment.test.mjs

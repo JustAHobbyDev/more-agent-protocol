@@ -27,7 +27,12 @@ jobs:
 
 The reusable workflow uses the caller repository's `GITHUB_TOKEN`. No personal access token is required for the normal case. The caller must allow the requested `issues: write` / `pull-requests: write` permissions.
 
-For stronger reproducibility after a stable release/tag exists, pin the reusable workflow to that tag or exact commit instead of `@main`.
+For reproducibility and security, pin the reusable workflow to an exact commit
+instead of `@main`. The reusable workflow checks out its co-located repair action
+from the same repository and exact commit that defines the called job, so the code
+receiving the caller token is bound to the reviewed workflow source. A release tag
+also keeps the workflow and action together, but a tag can move and is therefore a
+weaker pin than a commit SHA.
 
 ## What is repaired
 
