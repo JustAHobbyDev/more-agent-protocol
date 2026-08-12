@@ -31,8 +31,3 @@ jobs:
           node --test
           .github/actions/repair-more-comment/repair.test.mjs
           .github/workflows/repair-more-comment.test.mjs
-
-  test-reusable-workflow-source-binding:
-    permissions:
-      contents: read
-    uses: ./.github/workflows/repair-more-comment.yml
